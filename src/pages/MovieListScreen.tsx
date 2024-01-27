@@ -25,7 +25,7 @@ const MovieListScreen = ({ navigation }: Props) => {
     handleGetMovies();
   }, []);
 
-  const handleGoToHomeTwoButton = (movie: Movie) => {
+  const handleGoToMovieDetailsButton = (movie: Movie) => {
     navigation.navigate("home2", { movie });
   };
 
@@ -39,7 +39,7 @@ const MovieListScreen = ({ navigation }: Props) => {
           style={styles.listContainer}
           data={movies}
           renderItem={({ item }) => (
-            <MovieItem movie={item} onPress={handleGoToHomeTwoButton} />
+            <MovieItem movie={item} onPress={handleGoToMovieDetailsButton} />
           )}
         />
       )}
