@@ -1,8 +1,8 @@
 import { createStackNavigator } from "@react-navigation/stack";
 
+import type { Movie } from "../@types/Movie";
 import MovieScreen from "../pages/MovieScreen";
 import MovieListScreen from "../pages/MovieListScreen";
-import { type Movie } from "../@types/Movie";
 
 export type HomeStackParamList = {
   home1: undefined;

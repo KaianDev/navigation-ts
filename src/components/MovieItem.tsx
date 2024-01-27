@@ -1,6 +1,6 @@
-import { Button, Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Movie } from "../@types/Movie";
+import { Button, Image, StyleSheet, Text, View } from "react-native";
+import type { Movie } from "../@types/Movie";
 
 type MovieItemProps = {
   movie: Movie;

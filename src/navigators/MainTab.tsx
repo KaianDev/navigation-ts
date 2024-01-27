@@ -1,8 +1,8 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeStack from "./HomeStack";
-import About from "../pages/AboutScreen";
 import { Ionicons } from "@expo/vector-icons";
+
+import HomeStack from "./HomeStack";
 import AboutScreen from "../pages/AboutScreen";
 
 const MainTab = createBottomTabNavigator();

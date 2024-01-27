@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-import { type StackScreenProps } from "@react-navigation/stack";
-import { type HomeStackParamList } from "../navigators/HomeStack";
+import type { StackScreenProps } from "@react-navigation/stack";
+import type { HomeStackParamList } from "../navigators/HomeStack";
 
 type Props = StackScreenProps<HomeStackParamList, "home2">;
 

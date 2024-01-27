@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import { type StackScreenProps } from "@react-navigation/stack";
+import type { StackScreenProps } from "@react-navigation/stack";
 
-import MovieItem from "../components/MovieItem";
 import { getMovies } from "../data/movies";
+import MovieItem from "../components/MovieItem";
 
-import { type Movie } from "../@types/Movie";
-import { type HomeStackParamList } from "../navigators/HomeStack";
+import type { Movie } from "../@types/Movie";
+import type { HomeStackParamList } from "../navigators/HomeStack";
 
 type Props = StackScreenProps<HomeStackParamList, "home1">;
 
