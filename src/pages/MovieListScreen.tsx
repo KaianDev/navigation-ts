@@ -1,14 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
-import { Movie } from "../@types/Movie";
-import { getMovies } from "../data/movies";
+import { StyleSheet, Text, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import MovieItem from "../components/MovieItem";
+import { type StackScreenProps } from "@react-navigation/stack";
 
-const MovieListScreen = () => {
+import MovieItem from "../components/MovieItem";
+import { getMovies } from "../data/movies";
+
+import { type Movie } from "../@types/Movie";
+import { type HomeStackParamList } from "../navigators/HomeStack";
+
+type Props = StackScreenProps<HomeStackParamList, "home1">;
+
+const MovieListScreen = ({ navigation }: Props) => {
   const [movies, setMovies] = useState<Movie[] | false>([]);
-  const navigation = useNavigation();
 
   useEffect(() => {
     const handleGetMovies = async () => {

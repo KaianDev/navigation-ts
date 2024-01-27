@@ -1,23 +1,25 @@
-import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { useRoute } from "@react-navigation/native";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { type StackScreenProps } from "@react-navigation/stack";
+import { type HomeStackParamList } from "../navigators/HomeStack";
 
-const MovieScreen = () => {
-  const route = useRoute();
-  let movie = "";
+type Props = StackScreenProps<HomeStackParamList, "home2">;
 
-  if (route.params) {
-    movie = route.params.movie;
-  }
+const MovieScreen = ({ route }: Props) => {
+  let movie = route.params?.movie;
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{movie.titulo}</Text>
-      <Image
-        source={{ uri: movie.avatar }}
-        style={styles.avatar}
-        resizeMode="contain"
-      />
+      {movie && (
+        <>
+          <Text style={styles.title}>{movie.titulo}</Text>
+          <Image
+            source={{ uri: movie.avatar }}
+            style={styles.avatar}
+            resizeMode="contain"
+          />
+        </>
+      )}
     </View>
   );
 };
